@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: Debug Server-Side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "C:/Users/mitul/OneDrive/Desktop/Mitul/LegalDesk",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env.local"
+    },
+    {
+      "name": "Next.js: Debug Client-Side (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "C:/Users/mitul/OneDrive/Desktop/Mitul/LegalDesk"
+    },
+    {
+      "name": "Next.js: Full-Stack Debug",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "C:/Users/mitul/OneDrive/Desktop/Mitul/LegalDesk",
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "Local:.*(https?://localhost:3000)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      },
+      "envFile": "${workspaceFolder}/.env.local"
+    }
+  ]
+}

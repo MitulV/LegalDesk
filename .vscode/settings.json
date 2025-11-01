@@ -1,0 +1,75 @@
+{
+  "window.title": "${rootName}",
+  "files.eol": "\n",
+  /* Formatting */
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  /* ESLint + auto fix on save */
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  /* Hide heavy folders from explorer & search */
+  "files.exclude": {
+    "**/.next": true,
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/.turbo": true,
+    "**/dist": true,
+    "**/.vercel": true
+  },
+  "search.exclude": {
+    "**/.next": true,
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    "**/yarn.lock": true,
+    "**/.vercel": true
+  },
+  /* Import updates on file move */
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  /* Type checking & validation */
+  "typescript.tsc.autoDetect": "on",
+  "css.validate": true,
+  "scss.validate": true,
+  /* Terminal & tasks */
+  "task.allowAutomaticTasks": "on",
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  /* Optional: prettier config fallback (if you don't have project .prettierrc) */
+  "prettier.requireConfig": false,
+  /* Optional: files to watch less aggressively (reduce CPU on large workspaces) */
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/.git/**": true
+  }
+}

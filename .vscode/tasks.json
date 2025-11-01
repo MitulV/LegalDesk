@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Next.js (npm)",
+      "type": "shell",
+      "command": "npm",
+      "args": [
+        "run",
+        "dev"
+      ],
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*",
+          "endsPattern": "(Local:|ready|started|compiled|http://localhost|started server|ready - started)"
+        }
+      },
+      "options": {
+        "cwd": "C:/Users/mitul/OneDrive/Desktop/Mitul/LegalDesk"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "frontend",
+        "clear": true
+      }
+    },
+    {
+      "label": "Start ALL",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "Start Next.js (npm)"
+      ],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
